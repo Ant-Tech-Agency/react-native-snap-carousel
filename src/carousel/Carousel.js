@@ -451,7 +451,7 @@ export default class Carousel extends Component {
         const { loopClonesPerSide } = props;
         const itemsLength = this._getCustomDataLength(props);
 
-        if (!itemsLength || index > itemsLength - 1 || index < 0) {
+        if (!itemsLength && index > itemsLength - 1 && index < 0) {
             return 0;
         }
 
